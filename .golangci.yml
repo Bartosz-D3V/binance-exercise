@@ -1,0 +1,31 @@
+linters:
+  enable:
+    - cyclop
+    - depguard
+    - dupl
+    - errname
+    - exhaustive
+    - gochecknoglobals
+    - gocognit
+    - goconst
+    - godot
+    - gomnd
+    - gosec
+    - ifshort
+    - importas
+    - misspell
+    - gocritic
+    - unconvert
+    - unparam
+    - wastedassign
+    - nestif
+    - prealloc
+    - paralleltest
+    - noctx
+    - deadcode
+    - whitespace
+    - gofmt
+    - nilerr
+    - exportloopref
+    - asciicheck
+    - tenv
