@@ -17,11 +17,11 @@ Application expects three system environment variables that provide high configu
 
 For convenience, all can be set by using `envDefault` in config/config.go
 
-### As go application
+### Standalone
 
 You can run the application simply by building and executing `main.go` file
 
-### As Docker container
+### Docker
 
 1. Build docker image: `docker build . -t binance-exercise`
 2. Run docker container: `docker run -t binance-exercise`
