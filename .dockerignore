@@ -1,0 +1,6 @@
+.git/
+.idea/
+*.md
+.golangci.yml
+.gitignore
+.github/
