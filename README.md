@@ -17,9 +17,19 @@ Application expects three system environment variables that provide high configu
 
 For convenience, all can be set by using `envDefault` in config/config.go
 
+### As go application
+
+You can run the application simply by building and executing `main.go` file
+
+### As Docker container
+
+1. Build docker image: `docker build . -t binance-exercise`
+2. Run docker container: `docker run -t binance-exercise`
+
 ## Approach to the problem
 
-I decided to create a websocket client that connects to Binance API and converts the response to the appropriate go struct.
+I decided to create a websocket client that connects to Binance API and converts the response to the appropriate go
+struct.
 
 Binance client does not process the tick in any way - instead it sends it to a channel.
 
@@ -47,6 +57,11 @@ In order to make sure that all database calls are safe, I used go channels and t
 
 The second issue was also the most enjoyable one - finding a solution to this problem was not trivial and required some
 work.
+
+The final issue I encountered was error handling - normally I would add a channel where errors could be sent and
+handled.
+But due to the fact that this is a Minimal Viable Product (MVP) in the financial sector, I decided that every error
+should result in an immediate stop to allow investigation and avoid unexpected behavior.
 
 ## Next steps
 

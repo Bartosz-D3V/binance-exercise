@@ -43,9 +43,16 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed to convert quantityToSell to decimal.decimal{}. Error=%s", err.Error())
 	}
+	if quantityToSell.IsNegative() {
+		log.Fatalf("QUANTITY_TO_SELL cannot be negative.")
+	}
+
 	minimumBid, err := decimal.NewFromString(cfg.MinimumBid)
 	if err != nil {
 		log.Fatalf("failed to convert minimumBid to decimal.decimal{}: Error=%s", err.Error())
+	}
+	if minimumBid.IsNegative() {
+		log.Fatalf("MINIMUM_BID cannot be negative.")
 	}
 
 	binanceClient := binance.New(conn)
