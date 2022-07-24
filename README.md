@@ -9,11 +9,11 @@ orders, when the liquidity in the order book allows it.
 
 Application expects three system environment variables that provide high configurability:
 
-`SYMBOL` - Symbol of the coin exchange - i.e. `btcusdt` or `ethusdt`
+`SYMBOL` - String - Symbol of the ticker - i.e. `btcusdt` or `ethusdt`
 
-`QUANTITY_TO_SELL` - Amount of assets to sell
+`QUANTITY_TO_SELL` - Decimal - Amount of assets to sell
 
-`MINIMUM_BID` - Minimum bid price in a currency denoted in `SYMBOL` variable (i.e. USD for `btcusdt`)
+`MINIMUM_BID` - Decimal - Minimum bid price in a currency denoted in `SYMBOL` variable (i.e. USD for `btcusdt`)
 
 For convenience, all can be set by using `envDefault` in config/config.go
 
