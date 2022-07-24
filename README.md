@@ -9,11 +9,11 @@ orders, when the liquidity in the order book allows it.
 
 Application expects three system environment variables that provide high configurability:
 
-`SYMBOL` - Symbol of the coin exchange - i.e. btcusdt or ethusd
+`SYMBOL` - Symbol of the coin exchange - i.e. `btcusdt` or `ethusdt`
 
 `QUANTITY_TO_SELL` - Amount of assets to sell
 
-`MINIMUM_BID` - Minimum bid price
+`MINIMUM_BID` - Minimum bid price in a currency denoted in `SYMBOL` variable (i.e. USD for `btcusdt`)
 
 For convenience, all can be set by using `envDefault` in config/config.go
 
@@ -54,3 +54,6 @@ I decided not to spend more than 6 hours on this exercise so there are many area
 
 1. Add integration tests (i.e., using wiremock)
 2. Add database tests for repository
+3. Add alerts to the application (i.e. using elastalert)
+4. Add database versioning (i.e. using flyway)
+5. Remove `envDefault` tags from Config struct - those should be defined by IaC tool (i.e. Terraform)
