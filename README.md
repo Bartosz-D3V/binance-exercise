@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d4909f61ccf84003a5d371e1977e51f2)](https://app.codacy.com/gh/Bartosz-D3V/binance-exercise?utm_source=github.com&utm_medium=referral&utm_content=Bartosz-D3V/binance-exercise&utm_campaign=Badge_Grade)
 [![Go](https://github.com/Bartosz-D3V/binance-exercise/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/Bartosz-D3V/binance-exercise/actions/workflows/go.yml)
 
 # binance-exercise
